@@ -1,3 +1,9 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
 server:
   port: 7900
 spring:
@@ -19,4 +25,12 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
     com.itmuch: DEBUG
-
+eureka:
+  client:
+    healthcheck:  # 健康检查 health
+      enabled: true
+    service-url:
+      defaultZone: http://admin:admin@127.0.0.1:8761/eureka
+  instance:
+    prefer-ip-address: true
+#    instance-id: ${spring.application.name}:${spring.application.instance_id}:${server.port}

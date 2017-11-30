@@ -1,2 +1,22 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
 server:
   port: 7901
+logging:
+  level:
+    com.yumao: DEBUG
+spring:
+  application:
+    name: microservice-cousumer-movie
+eureka:
+  client:
+    healthcheck:  # 健康检查 health
+      enabled: true
+    service-url:
+      defaultZone: http://admin:admin@127.0.0.1:8761/eureka
+  instance:
+    prefer-ip-address: true

@@ -8,7 +8,9 @@ server:
   port: 8761
 eureka:
   client:
+    healthcheck:  # 健康检查 health
+      enabled: true
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://user:password123@localhost:8761/eureka
+      defaultZone: http://admin:admin@127.0.0.1:8761/eureka
